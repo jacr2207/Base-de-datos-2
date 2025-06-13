@@ -1,0 +1,9 @@
+db.pokemons.find(
+  {
+    $expr: { $gte: [ { $size: "$games" }, 5 ] }
+  },
+  {
+    nombre: true,
+    games: true
+  }
+) 
